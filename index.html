@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Rotating Fish 🐟</title>
+        <style>
+        body {
+          min-height: 100vh;
+        }
+            @keyframes fish {
+                0% {
+                    transform: scaleX(1);
+                }
+                50% {
+                    transform: scaleX(-1);
+                }
+                100% {
+                    transform: scaleX(1);
+                }
+            }
+            .fish-aquarium {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-content: center;
+            }
+            .the-fish {
+                margin: auto;
+                padding: auto;
+                animation: fish 1s ease-in-out infinite;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="fish-aquarium">
+            <div class="the-fish">
+                <img src="fis.png" width="240px" alt="No fish?" />
+            </div>
+            <br />
+            &nbsp;<br />
+            <audio controls loop autoplay preload src="audio.mp3">
+                No audio playback support?
+            </audio>
+        </div>
+    </body>
+</html>
