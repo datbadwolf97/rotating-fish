@@ -5,18 +5,18 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Rotating Fish 🐟</title>
         <style>
-        body {
-          min-height: 100vh;
-        }
+            body {
+                min-height: 100vh;
+            }
             @keyframes fish {
                 0% {
-                    transform: scaleX(1);
+                    transform: rotate(0deg);
                 }
                 50% {
-                    transform: scaleX(-1);
+                    transform: rotate(-180deg) scaleY(-1) scaleX(1);
                 }
                 100% {
-                    transform: scaleX(1);
+                    transform: rotate(-360deg);
                 }
             }
             .fish-aquarium {
@@ -25,24 +25,35 @@
                 flex-wrap: wrap;
                 justify-content: center;
                 align-content: center;
+                margin-top: 120px;
             }
             .the-fish {
-                margin: auto;
-                padding: auto;
-                animation: fish 1s ease-in-out infinite;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 200px;
+                padding-left: 25%;
+                padding-right: 25%;
+                animation: fish 0.879s linear infinite;
+            }
+            body {
+                background-image: url("bkg.jpg");
+                background-size: contain;
+                background-attachment: fixed;
             }
         </style>
     </head>
     <body>
         <div class="fish-aquarium">
             <div class="the-fish">
-                <img src="fis.png" width="240px" alt="No fish?" />
+                <img src="fis.png" width="220px" alt="No fish?" />
             </div>
             <br />
             &nbsp;<br />
-            <audio controls loop autoplay preload src="audio.mp3">
-                No audio playback support?
-            </audio>
+            <center>
+                <audio controls loop autoplay preload src="audio.mp3">
+                    No audio playback support?
+                </audio>
+            </center>
         </div>
     </body>
 </html>
